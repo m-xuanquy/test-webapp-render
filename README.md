@@ -1,4 +1,4 @@
-~# Build News Website With Node.js, Express & EJS - WP Rest API
+# Build News Website With Node.js, Express & EJS - WP Rest API
 
 This was created as part of YouTube Video. Links below
 
