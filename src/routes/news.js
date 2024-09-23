@@ -5,18 +5,18 @@ const axios = require('axios')
 newsRouter.get('', async (req, res) => {
     try {
         const newsAPI = await axios.get(`https://raddy.dev/wp-json/wp/v2/posts/`)
-        res.render('news', { articles: newsAPI.data })
+        res.render('index', { articles: newsAPI.data })
     } catch (err) {
         if (err.response) {
-            res.render('news', { articles: null })
+            res.render('index', { articles: null })
             console.log(err.response.data)
             console.log(err.response.status)
             console.log(err.response.headers)
         } else if (err.request) {
-            res.render('news', { articles: null })
+            res.render('index', { articles: null })
             console.log(err.requiest)
         } else {
-            res.render('news', { articles: null })
+            res.render('index', { articles: null })
             console.error('Error', err.message)
         }
     }
